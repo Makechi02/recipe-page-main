@@ -1,0 +1,169 @@
+:root {
+    /* PRIMARY */
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+
+    /* NEUTRAL */
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+@font-face {
+    font-family: "Young Serif";
+    src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+}
+
+ul,
+ol {
+    padding-inline: 1.2rem;
+}
+
+li {
+    padding: 7px 1rem;
+}
+
+main {
+    background-color: var(--eggshell);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 10%;
+    color: var(--wenge-brown);
+}
+
+.content {
+    background-color: var(--white);
+    width: 55%;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.content .image-container {
+    background: url("assets/images/image-omelette.jpeg") center no-repeat;
+    background-size: cover;
+    background-color: var(--eggshell);
+    background-blend-mode: multiply;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.content h1 {
+    font-family: "Young Serif";
+    font-weight: 400;
+    color: var(--dark-charcoal);
+    font-size: 2em;
+}
+
+.content section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content section h2 {
+    color: var(--nutmeg);
+    font-family: "Young Serif";
+    font-weight: 400;
+    font-size: 2em;
+}
+
+.preparation-section {
+    background-color: var(--rose-white);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.preparation-section h3 {
+    color: var(--dark-raspberry);
+}
+
+.preparation-section ul li span {
+    font-weight: bold;
+}
+
+.ingredients-section,
+.instructions-section {
+    border-bottom: 1px solid var(--light-grey);
+    padding-bottom: 2rem;
+}
+
+.instructions-section ol li span {
+    font-weight: bold;
+}
+
+.nutrition-section table {
+    border-collapse: collapse;
+}
+
+.nutrition-section table tr td {
+    border-bottom: 1px solid var(--light-grey);
+    padding: 1rem 2rem;
+}
+
+.nutrition-section table tr td:last-child {
+    color: var(--nutmeg);
+    font-weight: bold;
+}
+
+.nutrition-section table tr:last-child td {
+    border-bottom: none;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 650px) {
+    .content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 375px) {
+    main {
+        padding-block: unset;
+        padding-bottom: 1rem;
+    }
+
+    .content {
+        width: 100%;
+        border-radius: unset;
+        padding: unset;
+    }
+
+    .content .image-container {
+        height: 200px;
+        border-radius: unset;
+        margin-inline: unset;
+    }
+
+    .content section {
+        margin-inline: 2rem;
+    }
+}
